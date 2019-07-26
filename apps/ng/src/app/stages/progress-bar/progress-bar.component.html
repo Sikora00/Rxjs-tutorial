@@ -1,0 +1,9 @@
+<h2>Fill this progress bar in 5s</h2>
+<mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
+<a
+  [routerLink]="['/2']"
+  mat-raised-button
+  [color]="success ? 'primary' : 'warn'"
+  [disabled]="!success"
+  >Next</a
+>
