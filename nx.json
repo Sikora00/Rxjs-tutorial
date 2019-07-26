@@ -1,0 +1,24 @@
+{
+  "npmScope": "rxjs-tutorial",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ng-e2e": {
+      "tags": []
+    },
+    "ng": {
+      "tags": []
+    },
+    "react": {
+      "tags": []
+    },
+    "react-e2e": {
+      "tags": []
+    }
+  }
+}
