@@ -7,8 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './stages/welcome/welcome.component';
 import { MatProgressBarModule, MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PausableTimerComponent } from './stages/pausable-timer/pausable-timer.component';
 @NgModule({
-  declarations: [AppComponent, ProgressBarComponent, WelcomeComponent],
+  declarations: [AppComponent, ProgressBarComponent, WelcomeComponent, PausableTimerComponent],
   imports: [BrowserModule, AppRoutingModule, MatButtonModule, MatProgressBarModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
