@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from '@rxjs-tutorial/data';
 
 @Component({
@@ -7,12 +7,17 @@ import { Post } from '@rxjs-tutorial/data';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-
   @Input()
   post: Post;
-  constructor() { }
 
-  ngOnInit() {
+  @Output()
+  commentsOpen = new EventEmitter<Post>();
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  onCommentsOpen() {
+    this.commentsOpen.emit(this.post);
   }
-
 }

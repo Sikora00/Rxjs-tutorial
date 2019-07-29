@@ -1,12 +1,11 @@
-<div class="container">
+<div class="posts-stage__container">
+  <h5>Source component: apps/ng/src/app/stages/posts-stage</h5>
   <h2>
     Load and display posts from
     <a [href]="src">{{ src }}</a>
   </h2>
-  <a
-  [routerLink]="['/4']"
-  mat-raised-button
-  >Next</a
->
+  <rxjs-tutorial-next-stage-button
+    [stage]="4"
+  ></rxjs-tutorial-next-stage-button>
   <rxjs-tutorial-posts *ngIf="posts" [posts]="posts"> </rxjs-tutorial-posts>
 </div>

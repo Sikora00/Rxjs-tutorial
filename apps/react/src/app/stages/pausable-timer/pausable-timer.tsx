@@ -30,6 +30,7 @@ export class PausableTimer extends Component<
   render() {
     return (
       <div>
+        <h5>Source component: apps/react/src/app/stages/pausable-timer</h5>
         <h2>Display timer pausable by spacebar</h2>
         <p>{this.state.timer}</p>
         <NextStageButton stage={3} />

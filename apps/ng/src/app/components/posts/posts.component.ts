@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from '@rxjs-tutorial/data';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,4 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class PostsComponent {
   @Input()
   posts: Post[];
+
+  @Output()
+  commentsOpent = new EventEmitter<Post>();
+
+  onCommentsOpen(post: Post) {
+    this.commentsOpent.emit(post);
+  }
 }

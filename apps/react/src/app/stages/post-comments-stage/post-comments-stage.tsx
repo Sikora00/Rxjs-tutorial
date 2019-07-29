@@ -17,8 +17,6 @@ export class PostCommentsStage extends React.Component<
   PostCommentsStageProps,
   PostCommentsStageState
 > {
-  posts: Post[];
-
   constructor(props: PostCommentsStageProps) {
     super(props);
     this.state = {
@@ -45,10 +43,12 @@ export class PostCommentsStage extends React.Component<
   render() {
     return (
       <div className="posts-stage__container">
+        <h5>Source component: apps/react/src/app/stages/post-comments</h5>
         <h2>
           Load and display posts from{' '}
           <a href={this.state.postsSrc}>{this.state.postsSrc}</a> with comments
-          from <a href={this.state.commentsSrc}>{this.state.commentsSrc}?postId=</a>
+          from{' '}
+          <a href={this.state.commentsSrc}>{this.state.commentsSrc}?postId=</a>
           <ul>
             <li>loaded all together</li>
             <li>loaded one by one</li>

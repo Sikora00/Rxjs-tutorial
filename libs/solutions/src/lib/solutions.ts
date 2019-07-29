@@ -5,7 +5,8 @@ import {
   Observer,
   timer,
   fromEvent,
-  from
+  from,
+  Subject
 } from 'rxjs';
 import {
   map,
@@ -15,10 +16,11 @@ import {
   tap,
   startWith,
   concatMap,
-  reduce
+  reduce,
+  mergeMap
 } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Post, Comment } from '@rxjs-tutorial/data';
+import { Post, Comment, Author } from '@rxjs-tutorial/data';
 
 export function progressBar(): Observable<number> {
   const finishIn = 5 * 1000;
@@ -51,6 +53,34 @@ export function posts(src: string): Observable<Post[]> {
   return httpGet<Post[]>(src);
 }
 
+export function postCommentAuthor(
+  posrSrc: string,
+  commentsSrc: string,
+  authorSrc: string,
+  progress: Subject<number>
+): Observable<Post[]> {
+  let postsCount;
+  let resolvedPosts = 0;
+  return posts(posrSrc).pipe(
+    tap((posts: Post[]) => (postsCount = posts.length)),
+    switchMap((posts: Post[]) => from(posts)),
+    concatMap((post: Post) =>
+      httpGet(authorSrc + '/' + post.userId.toString()).pipe(
+        map((author: Author) => {
+          post.author = author;
+          resolvedPosts++;
+          progress.next((resolvedPosts / postsCount) * 100);
+          return post;
+        })
+      )
+    ),
+    reduce((acc: Post[], value: Post) => {
+      acc.push(value);
+      return acc;
+    }, [])
+  );
+}
+
 export function postsWithComments(
   postsSrc: string,
   commentsSrc: string
@@ -58,7 +88,7 @@ export function postsWithComments(
   return posts(postsSrc).pipe(
     switchMap((posts: Post[]) => from(posts)),
     concatMap((
-      post: Post // concat to loade one by one or merge to load all together
+      post: Post // concat to load one by one or merge to load all together
     ) =>
       httpGet(commentsSrc + '?postId=' + post.id.toString()).pipe(
         map((comments: Comment[]) => {

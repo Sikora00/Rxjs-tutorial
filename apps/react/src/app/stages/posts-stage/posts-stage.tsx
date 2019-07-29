@@ -36,6 +36,7 @@ export class PostsStage extends React.Component<
   render() {
     return (
       <div className="posts-stage__container">
+        <h5>Source component: apps/react/src/app/stages/posts-stage</h5>
         <h2>
           Load and display posts from{' '}
           <a href={this.state.src}>{this.state.src}</a>

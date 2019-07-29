@@ -1,5 +1,5 @@
 <div class="posts-stage__container">
-  <h5>Source component: apps/ng/src/app/stages/post-comments</h5>
+  <h5>Source component: apps/ng/src/app/stages/post-comment-author</h5>
   <h2>
     Load and display posts from
     <a [href]="postsSrc">{{ postsSrc }}</a>
@@ -13,5 +13,7 @@
   <rxjs-tutorial-next-stage-button
     [stage]="5"
   ></rxjs-tutorial-next-stage-button>
-  <rxjs-tutorial-posts [posts]="posts"> </rxjs-tutorial-posts>
+  <mat-progress-bar mode="determinate" [value]="progress | async"></mat-progress-bar>
+  <rxjs-tutorial-posts [posts]="posts" (commentsOpent)="onCommentsOpen($event)">
+  </rxjs-tutorial-posts>
 </div>

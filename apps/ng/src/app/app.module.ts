@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostCommentsStageComponent } from './stages/post-comments/post-comments.stage.component';
 import { PostComponent } from './components/post/post.component';
 import { PostsStageComponent } from './stages/posts-stage/posts.stage.component';
+import { PostCommentAuthorComponent } from './stages/post-comment-author/post-comment-author.component';
+import { NextStageButtonComponent } from './components/next-stage-button/next-stage-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { PostsStageComponent } from './stages/posts-stage/posts.stage.component'
     PostsComponent,
     PostCommentsStageComponent,
     PostComponent,
-    PostsStageComponent
+    PostsStageComponent,
+    PostCommentAuthorComponent,
+    NextStageButtonComponent
   ],
   imports: [
     AppRoutingModule,

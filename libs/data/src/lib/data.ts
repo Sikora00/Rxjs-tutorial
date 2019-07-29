@@ -1,9 +1,6 @@
-export interface Post {
-  body: string;
-  comments?: Comment[];
+export interface Author {
   id: number;
-  title: string;
-  userId: number;
+  name: string;
 }
 
 export interface Comment {
@@ -12,4 +9,13 @@ export interface Comment {
   name: string;
   email: string;
   body: string;
+}
+
+export interface Post {
+  author?: Author;
+  body: string;
+  comments?: Comment[];
+  id: number;
+  title: string;
+  userId: number;
 }

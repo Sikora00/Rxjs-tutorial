@@ -22,9 +22,9 @@ export class PostCommentsStageComponent implements OnInit {
     // then map received posts to requests for comments
     // and merge all together
     // Solution:
-    const source$ = postsWithComments(this.postsSrc, this.commentsSrc);
+    // const source$ = postsWithComments(this.postsSrc, this.commentsSrc);
 
-    // const source$ = of();
+    const source$ = of();
     source$.subscribe((posts: Post[]) => {
       this.posts = posts;
     });

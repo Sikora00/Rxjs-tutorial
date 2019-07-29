@@ -6,13 +6,15 @@ import { PausableTimerStageComponent } from './stages/pausable-timer/pausable-ti
 import { PostsComponent } from './components/posts/posts.component';
 import { PostsStageComponent } from './stages/posts-stage/posts.stage.component';
 import { PostCommentsStageComponent } from './stages/post-comments/post-comments.stage.component';
+import { PostCommentAuthorComponent } from './stages/post-comment-author/post-comment-author.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent, pathMatch: 'full' },
   { path: '1', component: ProgressBarStageComponent },
   { path: '2', component: PausableTimerStageComponent },
   { path: '3', component: PostsStageComponent },
-  { path: '4', component: PostCommentsStageComponent }
+  { path: '4', component: PostCommentsStageComponent },
+  { path: '5', component: PostCommentAuthorComponent }
 ];
 
 @NgModule({

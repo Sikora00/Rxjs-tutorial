@@ -1,9 +1,4 @@
+<h5>Source component: apps/ng/src/app/stages/progress-bar</h5>
 <h2>Fill this progress bar in 5s</h2>
 <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
-<a
-  [routerLink]="['/2']"
-  mat-raised-button
-  [color]="success ? 'primary' : 'warn'"
-  [disabled]="!success"
-  >Next</a
->
+<rxjs-tutorial-next-stage-button [stage]="2"></rxjs-tutorial-next-stage-button>

@@ -8,6 +8,7 @@ import ProgressBar from './stages/progress-bar/progress-bar';
 import PausableTimer from './stages/pausable-timer/pausable-timer';
 import PostsStage from './stages/posts-stage/posts-stage';
 import PostCommentsStage from './stages/post-comments-stage/post-comments-stage';
+import PostCommentAuthor from './stages/post-comment-author/post-comment-author';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
       <Route path="/2" exact render={() => <PausableTimer />} />
       <Route path="/3" exact render={() => <PostsStage />} />
       <Route path="/4" exact render={() => <PostCommentsStage />} />
+      <Route path="/5" exact render={() => <PostCommentAuthor />} />
     </div>
   );
 };

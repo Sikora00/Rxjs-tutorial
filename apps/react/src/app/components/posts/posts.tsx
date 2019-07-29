@@ -8,11 +8,14 @@ import { CircularProgress } from '@material-ui/core';
 /* tslint:disable:no-empty-interface */
 export interface PostsProps {
   posts: PostI[] | undefined;
+  onCommentsOpen?: (post: PostI) => void;
 }
 
 export const Posts = (props: PostsProps) => {
   const posts = props.posts ? (
-    props.posts.map((post: PostI) => <Post post={post} />)
+    props.posts.map((post: PostI) => (
+      <Post onCommentsOpen={props.onCommentsOpen} post={post} />
+    ))
   ) : (
     <CircularProgress />
   );

@@ -34,6 +34,7 @@ export class ProgressBar extends Component<ProgressBarProps, ProgressBarState> {
   render() {
     return (
       <div>
+        <h5>Source component: apps/react/src/app/stages/progress-bar</h5>
         <h2>Fill this progress bar in 5s</h2>
         <LinearProgress variant="determinate" value={this.state.value} />
         <NextStageButton stage={2} />
