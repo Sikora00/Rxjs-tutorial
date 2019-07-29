@@ -10,7 +10,7 @@ export interface WelcomeProps {}
 export class Welcome extends Component<WelcomeProps> {
   render() {
     return (
-      <div className="container">
+      <div className="welcome__container">
         <h1>Welcome to Rxjs tutorial!</h1>
         <img
           width="450"
@@ -36,8 +36,17 @@ export class Welcome extends Component<WelcomeProps> {
 
         <h2>Then go through the tasks</h2>
         <ol>
-          <li>
+        <li>
             <Link to="1">Progress Bar</Link>
+          </li>
+          <li>
+            <Link to="2">Pausable Timer</Link>
+          </li>
+          <li>
+            <Link to="3">Posts</Link>
+          </li>
+          <li>
+            <Link to="4">Posts With Comments</Link>
           </li>
         </ol>
       </div>

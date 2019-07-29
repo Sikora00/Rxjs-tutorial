@@ -1,0 +1,9 @@
+.posts-stage__container {
+    background-color: #00bcd4;
+    min-height: 100vh;
+  }
+  h2 {
+    margin: 0;
+    padding: 20px;
+  }
+  

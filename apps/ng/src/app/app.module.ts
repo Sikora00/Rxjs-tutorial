@@ -28,7 +28,6 @@ import { PostsStageComponent } from './stages/posts-stage/posts.stage.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,

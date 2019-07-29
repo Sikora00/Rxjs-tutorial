@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './pausable-timer.css';
 import { pausableInterval } from '@rxjs-tutorial/solutions';
 import { of } from 'rxjs';
+import NextStageButton from '../../components/next-stage-button/next-stage-button';
 
 /* tslint:disable:no-empty-interface */
 export interface PausableTimerProps {}
@@ -20,10 +21,10 @@ export class PausableTimer extends Component<
   }
   componentDidMount() {
     // ToDo fill the timer property to correctly display the pausable timer
-    // Solution: 
+    // Solution:
     // const source$ = pausableInterval.bind(this)()
-      const source$ = of(0);
-      source$.subscribe((value: number) => this.setState({ timer: value }));
+    const source$ = of(0);
+    source$.subscribe((value: number) => this.setState({ timer: value }));
   }
 
   render() {
@@ -31,6 +32,7 @@ export class PausableTimer extends Component<
       <div>
         <h2>Display timer pausable by spacebar</h2>
         <p>{this.state.timer}</p>
+        <NextStageButton stage={3} />
       </div>
     );
   }
