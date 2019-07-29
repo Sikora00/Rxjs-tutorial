@@ -36,7 +36,10 @@ export class Welcome extends Component<WelcomeProps> {
 
         <h2>Then go through the tasks</h2>
         <ol>
-        <li>
+          <li>
+            <Link to="0">Introduction</Link>
+          </li>
+          <li>
             <Link to="1">Progress Bar</Link>
           </li>
           <li>

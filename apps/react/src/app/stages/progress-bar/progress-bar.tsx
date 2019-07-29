@@ -21,7 +21,7 @@ export class ProgressBar extends Component<ProgressBarProps, ProgressBarState> {
   }
 
   componentDidMount() {
-    // ToDo create your own observable to resolve the task
+    // Emit events from source$ from 0 to 100 within 5 seconds
     const source$ = of();
     // Soultion:
     // const source$ = progressBar();

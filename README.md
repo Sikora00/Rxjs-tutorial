@@ -3,7 +3,7 @@
 ## Installation
 
 `npm install` <br />
-`npm i -g @angular/cli`
+`npm install -g @angular/cli`
 
 ## Train on your favourite framework
 

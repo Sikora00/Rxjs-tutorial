@@ -4,6 +4,7 @@ import './post-comments-stage.css';
 import Posts from '../../components/posts/posts';
 import { Post } from '@rxjs-tutorial/data';
 import { postsWithComments } from '@rxjs-tutorial/solutions';
+import { of } from 'rxjs';
 
 /* tslint:disable:no-empty-interface */
 export interface PostCommentsStageProps {}
@@ -30,12 +31,12 @@ export class PostCommentsStage extends React.Component<
     // then map received posts to requests for comments
     // and merge all together
     // Solution:
-    const source$ = postsWithComments(
-      this.state.postsSrc,
-      this.state.commentsSrc
-    );
+    // const source$ = postsWithComments(
+    //   this.state.postsSrc,
+    //   this.state.commentsSrc
+    // );
 
-    // const source$ = of();
+    const source$ = of();
     source$.subscribe((posts: Post[]) => {
       this.setState({ posts });
     });

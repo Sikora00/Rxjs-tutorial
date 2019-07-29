@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, fromEvent } from 'rxjs';
+import { of } from 'rxjs';
 import { pausableInterval } from '@rxjs-tutorial/solutions';
-import { filter, startWith, tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'rxjs-tutorial-pausable-timer',
@@ -9,12 +8,15 @@ import { filter, startWith, tap, map } from 'rxjs/operators';
   styleUrls: ['./pausable-timer.stage.component.css']
 })
 export class PausableTimerStageComponent implements OnInit {
-  timer: Observable<number>;
+  timer: number;
   paused = false;
   constructor() {}
 
   ngOnInit() {
-    // ToDo fill the timer property to correctly display the pausable timer
-    // this.timer = pausableInterval.bind(this)();
+    // Emit counter like values (interval) but stop and resume on spacebar click (paused property)
+    // Solution:
+    // const source$ = pausableInterval.bind(this)();
+    const source$ = of(0);
+    source$.subscribe((value: number) => (this.timer = value));
   }
 }

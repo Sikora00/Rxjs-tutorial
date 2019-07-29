@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '@rxjs-tutorial/data';
-import { HttpClient } from '@angular/common/http';
 import { posts } from '@rxjs-tutorial/solutions';
 import { of } from 'rxjs';
 
@@ -16,7 +15,7 @@ export class PostsStageComponent implements OnInit {
 
   ngOnInit() {
     // Prepare http request to get posts
-    // use it as an Observabel
+    // use it as an Observable
     // Solution:
     // const source$ = posts(this.http, this.src)
 

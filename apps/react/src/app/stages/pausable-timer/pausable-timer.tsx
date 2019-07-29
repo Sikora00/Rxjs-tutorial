@@ -20,7 +20,7 @@ export class PausableTimer extends Component<
     this.state = { timer: 0 };
   }
   componentDidMount() {
-    // ToDo fill the timer property to correctly display the pausable timer
+    // Emit counter like values (interval) but stop and resume on spacebar click (paused property)
     // Solution:
     // const source$ = pausableInterval.bind(this)()
     const source$ = of(0);

@@ -42,14 +42,14 @@ export class PostCommentAuthor extends Component<
     // Display progres of loading
     // Fix bug in onCommentsOpen
     // Solution:
-    const source$ = postCommentAuthor.bind(this)(
-      this.state.postsSrc,
-      this.state.commentsSrc,
-      this.state.authorSrc,
-      this.state.progress$
-    );
+    // const source$ = postCommentAuthor.bind(this)(
+    //   this.state.postsSrc,
+    //   this.state.commentsSrc,
+    //   this.state.authorSrc,
+    //   this.state.progress$
+    // );
 
-    // const source$ = of();
+    const source$ = of();
     source$.subscribe((posts: Post[]) => {
       this.setState({ posts });
     });

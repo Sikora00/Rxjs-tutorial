@@ -7,9 +7,11 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostsStageComponent } from './stages/posts-stage/posts.stage.component';
 import { PostCommentsStageComponent } from './stages/post-comments/post-comments.stage.component';
 import { PostCommentAuthorComponent } from './stages/post-comment-author/post-comment-author.component';
+import { IntroductionComponent } from './stages/introduction/introduction.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent, pathMatch: 'full' },
+  { path: '0', component: IntroductionComponent },
   { path: '1', component: ProgressBarStageComponent },
   { path: '2', component: PausableTimerStageComponent },
   { path: '3', component: PostsStageComponent },

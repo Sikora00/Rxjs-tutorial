@@ -15,6 +15,7 @@ import { PostComponent } from './components/post/post.component';
 import { PostsStageComponent } from './stages/posts-stage/posts.stage.component';
 import { PostCommentAuthorComponent } from './stages/post-comment-author/post-comment-author.component';
 import { NextStageButtonComponent } from './components/next-stage-button/next-stage-button.component';
+import { IntroductionComponent } from './stages/introduction/introduction.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { NextStageButtonComponent } from './components/next-stage-button/next-st
     PostComponent,
     PostsStageComponent,
     PostCommentAuthorComponent,
-    NextStageButtonComponent
+    NextStageButtonComponent,
+    IntroductionComponent
   ],
   imports: [
     AppRoutingModule,

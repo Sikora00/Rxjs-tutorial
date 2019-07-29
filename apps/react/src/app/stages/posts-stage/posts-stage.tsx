@@ -24,11 +24,11 @@ export class PostsStage extends React.Component<
   }
   componentDidMount() {
     // Prepare http request to get posts
-    // use it as an Observabel
+    // use it as an Observable
     // Solution:
-    const source$ = posts(this.state.src)
+    // const source$ = posts(this.state.src)
 
-    // const source$ = of([]);
+    const source$ = of([]);
     source$.subscribe((posts: Post[]) => {
       this.setState({ posts });
     });
