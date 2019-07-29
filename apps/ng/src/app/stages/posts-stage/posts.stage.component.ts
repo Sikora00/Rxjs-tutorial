@@ -12,14 +12,14 @@ import { of } from 'rxjs';
 export class PostsStageComponent implements OnInit {
   posts: Post[];
   readonly src = 'https://jsonplaceholder.typicode.com/posts';
-  constructor(private readonly http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
     // Prepare http request to get posts
     // use it as an Observabel
     // Solution:
     // const source$ = posts(this.http, this.src)
-    
+
     const source$ =  of([]);
     source$.subscribe((posts: Post[]) => {
       this.posts = posts;

@@ -15,7 +15,7 @@ export class PostCommentsStageComponent implements OnInit {
   readonly commentsSrc = 'https://jsonplaceholder.typicode.com/comments'; //?postId=1
   readonly postsSrc = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(private readonly http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
     // Prepare http request to get posts
