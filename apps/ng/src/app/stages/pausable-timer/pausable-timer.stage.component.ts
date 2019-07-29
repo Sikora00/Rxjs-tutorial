@@ -5,10 +5,10 @@ import { filter, startWith, tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'rxjs-tutorial-pausable-timer',
-  templateUrl: './pausable-timer.component.html',
-  styleUrls: ['./pausable-timer.component.css']
+  templateUrl: './pausable-timer.stage.component.html',
+  styleUrls: ['./pausable-timer.stage.component.css']
 })
-export class PausableTimerComponent implements OnInit {
+export class PausableTimerStageComponent implements OnInit {
   timer: Observable<number>;
   paused = false;
   constructor() {}

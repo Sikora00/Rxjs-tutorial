@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>
+    Load and display posts from
+    <a [href]="src">{{ src }}</a>
+  </h2>
+  <a
+  [routerLink]="['/4']"
+  mat-raised-button
+  >Next</a
+>
+  <rxjs-tutorial-posts *ngIf="posts" [posts]="posts"> </rxjs-tutorial-posts>
+</div>

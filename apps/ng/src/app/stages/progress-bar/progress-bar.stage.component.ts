@@ -5,10 +5,10 @@ import { takeUntil, startWith, map } from 'rxjs/operators';
 
 @Component({
   selector: 'rxjs-tutorial-progress-bar',
-  templateUrl: './progress-bar.component.html',
-  styleUrls: ['./progress-bar.component.css']
+  templateUrl: './progress-bar.stage.component.html',
+  styleUrls: ['./progress-bar.stage.component.css']
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarStageComponent implements OnInit {
   value = 0;
   success = false;
   constructor() {}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './pausable-timer.css';
 import { pausableInterval } from '@rxjs-tutorial/solutions';
+import { of } from 'rxjs';
 
 /* tslint:disable:no-empty-interface */
 export interface PausableTimerProps {}
@@ -19,9 +20,10 @@ export class PausableTimer extends Component<
   }
   componentDidMount() {
     // ToDo fill the timer property to correctly display the pausable timer
-    pausableInterval
-      .bind(this)()
-      .subscribe((value: number) => this.setState({ timer: value }));
+    // Solution: 
+    // const source$ = pausableInterval.bind(this)()
+      const source$ = of(0);
+      source$.subscribe((value: number) => this.setState({ timer: value }));
   }
 
   render() {

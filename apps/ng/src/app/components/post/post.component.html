@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-card>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <mat-expansion-panel *ngIf="post.comments">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Comments
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ol>
+      <li *ngFor="let comment of post.comments">
+        {{ comment.body }}
+      </li>
+    </ol>
+    </mat-expansion-panel>
+  </mat-card>
+</div>

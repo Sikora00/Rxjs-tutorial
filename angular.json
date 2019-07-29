@@ -23,10 +23,7 @@
             "polyfills": "apps/ng/src/polyfills.ts",
             "tsConfig": "apps/ng/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "apps/ng/src/favicon.ico",
-              "apps/ng/src/assets"
-            ],
+            "assets": ["apps/ng/src/favicon.ico", "apps/ng/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/ng/src/styles.scss"
@@ -84,10 +81,7 @@
               "apps/ng/tsconfig.app.json",
               "apps/ng/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ng/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/ng/**"]
           }
         },
         "test": {
@@ -122,10 +116,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/ng-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ng-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/ng-e2e/**"]
           }
         }
       }
@@ -144,13 +135,8 @@
             "main": "apps/react/src/main.tsx",
             "polyfills": "apps/react/src/polyfills.ts",
             "tsConfig": "apps/react/tsconfig.app.json",
-            "assets": [
-              "apps/react/src/favicon.ico",
-              "apps/react/src/assets"
-            ],
-            "styles": [
-              "apps/react/src/styles.scss"
-            ],
+            "assets": ["apps/react/src/favicon.ico", "apps/react/src/assets"],
+            "styles": ["apps/react/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -196,10 +182,7 @@
               "apps/react/tsconfig.app.json",
               "apps/react/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/react/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/react/**"]
           }
         },
         "test": {
@@ -233,10 +216,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/react-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/react-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/react-e2e/**"]
           }
         }
       }
@@ -254,10 +234,7 @@
               "libs/solutions/tsconfig.lib.json",
               "libs/solutions/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/solutions/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/solutions/**"]
           }
         },
         "test": {
@@ -265,6 +242,31 @@
           "options": {
             "jestConfig": "libs/solutions/jest.config.js",
             "tsConfig": "libs/solutions/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "data": {
+      "root": "libs/data",
+      "sourceRoot": "libs/data/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/data/tsconfig.lib.json",
+              "libs/data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/data/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data/jest.config.js",
+            "tsConfig": "libs/data/tsconfig.spec.json"
           }
         }
       }
