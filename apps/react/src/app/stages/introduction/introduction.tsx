@@ -22,9 +22,16 @@ export const Introduction = (props: IntroductionProps) => {
         If you have problem with api you can find documentation{' '}
         <a href="https://jsonplaceholder.typicode.com/">here</a>
         <br />
+        Remember to always complete your observables in real code. I skept that
+        part only here.
+        <br />
+        Please, be forgiving when it comes to appearance. This was not the main
+        assumption.
+        <br />
         If you have any questions feel free to contact{' '}
         <a href="https://github.com/Sikora00">https://github.com/Sikora00</a>
-        <br />I would be happy to see your solution :)
+        <br />I would be happy to see your solution :) (maybe as a pull
+        request?)
       </p>
       <NextStageButton stage={1} />
     </div>
